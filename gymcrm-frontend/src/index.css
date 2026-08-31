@@ -1,0 +1,142 @@
+:root {
+  --bg: #15181c;
+  --surface: #1e2227;
+  --surface-alt: #23272d;
+  --text: #ece9e1;
+  --text-dim: #9aa0a6;
+  --accent: #c8ff3d;
+  --accent-ink: #1a2400;
+  --danger: #e8583f;
+  --border: #2b2f35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-header__mark {
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.app-nav {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.app-nav__item {
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.app-nav__item.is-active {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.app-main {
+  padding-top: 40px;
+}
+
+.screen__head h1 {
+  font-family: 'Archivo Black', system-ui, sans-serif;
+  font-size: 32px;
+  margin: 0 0 6px;
+}
+
+.screen__head p {
+  color: var(--text-dim);
+  margin: 0 0 28px;
+  font-size: 15px;
+}
+
+.state-msg {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.state-msg--error {
+  color: var(--danger);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 600;
+  padding: 14px 18px;
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge--ok {
+  background: rgba(200, 255, 61, 0.15);
+  color: var(--accent);
+}
+
+.badge--alert {
+  background: rgba(232, 88, 63, 0.15);
+  color: var(--danger);
+}
